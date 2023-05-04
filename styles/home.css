@@ -1,0 +1,76 @@
+.home-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-auto-rows: minmax(275px, 1fr);
+}
+
+@media (min-width: 600px){
+    .wide-card {
+        grid-column: span 2 / auto;    
+    }
+    .tall-card {
+        grid-row: span 2 / auto;
+    }
+}
+
+.card {
+    border-radius: 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2.5rem;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+}
+.author-img {
+    background: url("/assets/images/person.jpg");
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-inline-end: 1rem;
+    border: 3px solid #5c4f84;
+}
+.author-title {
+    color: #7f8c9f;
+}
+.card-title {
+    color: white;
+    margin: 1rem 0rem;
+    font-size: 1.3rem;
+}
+.card-body {
+    font-size: 0.9rem;
+}
+
+.violet-card {
+    background-color: #733fc8;
+}
+.gray-card {
+    background-color: #49556d;
+}
+.white-card {
+    background-color: white;
+}
+.white-card .card-title {
+    color: #4a4e57;
+}
+.dark-card {
+    background-color: #18202d;
+}
+
+.quote {
+    position: absolute;
+}
+.quote svg {
+    fill: white;
+    position: relative;
+    transform: scaleY(-1) scaleX(-1);
+    scale: 450%;
+    opacity: 0.5;
+    inset-inline-start: 24rem;
+    bottom: 4rem;
+}
